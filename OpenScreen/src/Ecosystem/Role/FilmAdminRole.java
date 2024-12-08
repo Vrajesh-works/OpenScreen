@@ -5,25 +5,24 @@
 package Ecosystem.Role;
 
 import Ecosystem.OpenScreenSystem;
+import Ecosystem.Movie.MovieDirectory;
 import Ecosystem.Organization.Organization;
 import Ecosystem.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.PlatformEmployee.CinemaEmployeeWorkAreaJPanel;
+import ui.FilmAdmin.FilmAdminWorkAreaJPanel;
 
 /**
  *
  * @author admin
  */
-public class CinemaEmployeeRole extends Role{
-
-    public CinemaEmployeeRole() {
-        this.type = RoleType.CinemaEmployee;
+public class FilmAdminRole extends Role{
+    public FilmAdminRole() {
+        this.type = RoleType.FilmAdmin;
     }
     
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, OpenScreenSystem system) {
         
-        return new CinemaEmployeeWorkAreaJPanel(userProcessContainer, account, system);
+        return new FilmAdminWorkAreaJPanel(userProcessContainer, account, system);
     }
-    
 }
