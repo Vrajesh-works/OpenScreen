@@ -8,22 +8,21 @@ import Ecosystem.OpenScreenSystem;
 import Ecosystem.Organization.Organization;
 import Ecosystem.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import ui.PlatformEmployee.CinemaEmployeeWorkAreaJPanel;
+import ui.FilmScriptwriter.FilmScriptwriterWorkAreaJPanel;
 
 /**
  *
  * @author admin
  */
-public class CinemaEmployeeRole extends Role{
+public class FilmScriptwriterRole extends Role{
 
-    public CinemaEmployeeRole() {
-        this.type = RoleType.CinemaEmployee;
+    public FilmScriptwriterRole() {
+        this.type = RoleType.FilmScriptwriter;
     }
     
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, OpenScreenSystem system) {
         
-        return new CinemaEmployeeWorkAreaJPanel(userProcessContainer, account, system);
+        return new FilmScriptwriterWorkAreaJPanel(userProcessContainer, account, system);
     }
-    
 }
